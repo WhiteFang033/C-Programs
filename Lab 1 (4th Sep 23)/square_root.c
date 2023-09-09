@@ -4,9 +4,9 @@
 int main(){
 	double num;
 	printf("Enter a number... \n");
-	scanf("%d",&num);
+	scanf("%lf",&num);
 	
 	double sqr = sqrt(num);
-	printf("The square root of number is: %d", sqr);
+	printf("The square root of number is: %lf", sqr);
 	return 0;
 }
