@@ -1,4 +1,4 @@
-//Program to display next date of the given date
+//Program to display next date of the input date
 #include <stdio.h>
 int main()
 {
@@ -10,7 +10,7 @@ int main()
 	scanf("%d", &m);
 	scanf("%d", &y);
 	
-	if( d == 30 || d == 31 || d == 28 || d == 29)  //Checking for ending dates
+	if( (d == 30 || d == 31 || d == 28 || d == 29) && (m>=1 && m<=12) && (y>0))  //Checking for ending dates
 	{
 		if(d==30 &&(m == 4 || m == 6 || m == 9 || m == 11)) //Checking for months with 30 days
 		{
@@ -45,13 +45,15 @@ int main()
 				}
 			}
 		}
-		else //Nothing Matched then just increasing the day by 1
-		{
-			printf("%d / %d / %d",d+1,m,y);
-		}
 	}
-	else{
+	else if((d>=1 && d<=31) && (m>=1 && m<=12) && (y>0)) //Nothing Matched then just increasing the day by 1
+	{
 		printf("%d / %d / %d",d+1,m,y);
 	}
+	else
+	{
+		printf("INVALID INPUT");
+	}
 	
+	return 0;
 }
