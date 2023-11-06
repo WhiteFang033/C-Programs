@@ -13,9 +13,9 @@ int main()
 	scanf("%d", &city_tier);
 	
 	//calculating daily allowance
-	da = basic_salary * 0.15;
-	
-	printf("%d da", da);
+	da= basic_salary * 0.15;
+
+	printf("%lf DA", da);
 	
 	//calculating house rent allowance
 	if(city_tier == 1)
@@ -34,7 +34,7 @@ int main()
 	{
 		printf("INVALID INPUT\n");
 	}
-	
+
 	//calculating final salary
 	final_salary = basic_salary + da + hra;
 	

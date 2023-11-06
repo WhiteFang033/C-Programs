@@ -21,7 +21,7 @@ int main()
     double si_final_amount = principal + s_interest;
 
     //Calcuating Compound Interests
-    double ci_final_amount = principal * pow((1 + rate / (time * 100)), rate * time);
+    double ci_final_amount = principal * pow((1 + rate / (time * 100)), time);
     double c_interest = ci_final_amount - principal;
 
     //Displaying Results

@@ -37,12 +37,14 @@ int main()
 					printf("%d / %d / %d", 1,m+1,y);
 				}
 	  		}
+			else if(d == 28)
+			{
+				printf("%d / %d / %d", 1,m+1,y);
+
+			}
 			else
 			{
-				if(d == 28)
-				{
-					printf("%d / %d / %d", 1,m+1,y);
-				}
+				printf("INVALID INPUT");
 			}
 		}
 	}
