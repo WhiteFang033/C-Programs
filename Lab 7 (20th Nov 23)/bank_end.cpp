@@ -9,6 +9,7 @@ struct customer {
 }bank[10];
 
 int transaction(int account_number, int request_type, int amount, struct customer bank[]);
+void displayDetails(int n, struct customer bank[]);
 
 int main()
 {
@@ -28,6 +29,7 @@ int main()
 		
 		printf("Enter the Current Balance: \n");
 		scanf("%d",&bank[i].balance);
+		printf("----------------------------------------\n");
 	}
 	
 	//Transaction Begins
@@ -37,7 +39,7 @@ int main()
 	{
 		if(acc_no == bank[i].account_number)
 		{
-			printf("Welcome %s", bank[i].name);
+			printf("Welcome %s!\n", bank[i].name);
 			break;
 		}
 	}
@@ -48,6 +50,7 @@ int main()
 	
 	if(request)
 		printf("Enter the amount to be withdrawed.\n");
+
 	else
 		printf("Enter the amount to be deposited.\n");
 	
@@ -58,9 +61,13 @@ int main()
 	int result = transaction(acc_no, request, amt, bank);
 	
 	if(result)
-    	printf("Transaction Unsuccessful. Unsufficient Balance.\n");
+	{
+	    printf("Transaction Successful.\n");
+    	displayDetails(i, bank);	
+	}
+
     else
-    	printf("Transaction Successful.\n");
+    	printf("Transaction Unsuccessful. Unsufficient Balance.\n");
 	
 	return 0;
 }
@@ -85,5 +92,12 @@ int transaction(int account_number, int request_type, int amount, struct custome
 	{
 		return 0;
 	}
+}
+
+void displayDetails(int n, struct customer bank[])
+{
+	printf("Account Number:  %d\n", bank[n].account_number);
+	printf("Account Number:  %s\n", bank[n].name);
+	printf("Current Balance: %d\n", bank[n].balance);
 }
 
