@@ -16,7 +16,7 @@ int main()
 	
 	int n1= strlen(str1);
 	int n2= strlen(str2);
-	int n3 = n1+n2+1;
+	int n3 = n1+n2-3;
 	char str3[n3];
 	
 	//Concatinating Strings
