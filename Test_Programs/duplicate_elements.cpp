@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main()
 {
-	int n, i, j, k=0;
+	int n, i, j;
 	printf("Enter the number of elements...\n");
 	scanf("%d", &n);
 	int a[n];
@@ -19,7 +19,7 @@ int main()
 		{
 			if((a[i] == a[j]) && (a[i] != -999))
 			{
-				printf("%d", a[j]);
+				printf("%d ", a[j]);
 				a[j] = -999;
 			}
 		}
